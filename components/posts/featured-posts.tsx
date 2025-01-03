@@ -4,8 +4,19 @@ import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { PostsGrid } from "./posts-grid";
 
+// Define the Post type
+interface Post {
+  id: string;
+  title: string;
+  content: string;
+  created_at: string;
+  image_url?: string;
+  video_url?: string;
+}
+
 export function FeaturedPosts() {
-  const [posts, setPosts] = useState([]);
+  // Add type to useState
+  const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

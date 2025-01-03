@@ -16,6 +16,17 @@ export interface StripeProduct {
   }
 }
 
+export interface Product {
+  id: string;
+  name: string;
+  description?: string;
+  price?: number;
+  image?: string;
+  metadata?: {
+    [key: string]: string;
+  };
+}
+
 export const getProducts = cache(async (): Promise<StripeProduct[]> => {
   const { data: products } = await stripe.products.list({
     expand: ['data.default_price'],

@@ -4,7 +4,7 @@ export interface Dictionary {
     brands: string;
     new: string;
     sales: string;
-    guide: string;
+    demo: string;
   };
   hero: {
     title: string;

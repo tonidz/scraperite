@@ -2,7 +2,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import type { ValidLocale } from "@/i18n/config";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import type { Dictionary } from "@/lib/types/dictionary";
+import type { Dictionary } from "@/i18n/config";
 import { ProductSeries } from "@/components/products/product-series";
 
 export const dynamic = "force-dynamic";

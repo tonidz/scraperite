@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { HeroContent } from './hero-content';
+import { HeroContent } from "./hero-content";
 
 interface HeroSectionProps {
   dict: {

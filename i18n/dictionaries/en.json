@@ -229,6 +229,10 @@
         "Send promotional emails about new products and special offers"
       ]
     },
+    "terms": {
+      "title": "User Terms",
+      "intro": "Welcome to our website! These user terms (”terms”) regulate your use of our website and your relationship with our website. By using our website, you agree to these terms. If you do not agree to any of these terms, please do not use our website."
+    },
     "cookies": {
       "title": "How we use cookies",
       "description": "A cookie is a small file which asks permission to be placed on your computer's hard drive. Cookies help us provide you with a better website by enabling us to monitor which pages you find useful.",

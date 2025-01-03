@@ -211,61 +211,78 @@
   },
   "privacy": {
     "title": "Integritetspolicy",
-    "intro": "Denna integritetspolicy ställer in hur denna webbplats använder och skyddar eventuell information som du ger när du använder denna webbplats. Vi är engagerade för att säkerställa att din integritet skyddas."
-  },
-  "terms": {
-    "title": "Användarvillkor",
-    "intro": "Välkommen till vår webbplats! Dessa användarvillkor (”villkor”) reglerar ditt användande av vår webbplats och dina relationer med vår webbplats. Genom att använda vår webbplats godkänner du dessa villkor. Om du inte godkänner något av dessa villkor, vänligen inte använda vår webbplats."
-  },
-  "cookies": {
-    "title": "Kakor",
-    "description": "En kaka är en liten fil som ber om tillåtelse att placeras på din datorns hårddisk. Kakor hjälper oss till att ge dig en bättre webbplats genom att vi kan övervaka vilka sidor du hittar användbara.",
-    "table": {
-      "name": "Kakans namn",
-      "description": "Beskrivning"
+    "intro": "Denna integritetspolicy ställer in hur denna webbplats använder och skyddar eventuell information som du ger när du använder denna webbplats. Vi är engagerade för att säkerställa att din integritet skyddas.",
+    "collect": {
+      "title": "Vad vi samlar in",
+      "items": [
+        "Kontakt namn",
+        "Kontaktinformation inklusive e-postadress",
+        "Demografisk information som postkod",
+        "Andra information relevant för kundundersökningar och/eller erbjudanden"
+      ]
     },
-    "items": [
-      {
-        "name": "FORM_KEY",
-        "description": "Lagrar slumpmässigt genererad nyckel som används för att förhindra falska förfrågningar."
+    "usage": {
+      "title": "Vad vi gör med informationen",
+      "items": [
+        "Intern redogörelse",
+        "Förbättra våra produkter och tjänster",
+        "Skicka promodiala e-post om nya produkter och speciella erbjudanden"
+      ]
+    },
+    "terms": {
+      "title": "Användarvillkor",
+      "intro": "Välkommen till vår webbplats! Dessa användarvillkor (”villkor”) reglerar ditt användande av vår webbplats och dina relationer med vår webbplats. Genom att använda vår webbplats godkänner du dessa villkor. Om du inte godkänner något av dessa villkor, vänligen inte använda vår webbplats."
+    },
+    "cookies": {
+      "title": "Kakor",
+      "description": "En kaka är en liten fil som ber om tillåtelse att placeras på din datorns hårddisk. Kakor hjälper oss till att ge dig en bättre webbplats genom att vi kan övervaka vilka sidor du hittar användbara.",
+      "table": {
+        "name": "Kakans namn",
+        "description": "Beskrivning"
       },
-      {
-        "name": "PHPSESSID",
-        "description": "Din session-ID på servern."
-      },
-      {
-        "name": "GUEST-VIEW",
-        "description": "Tillåter gäster att visa och redigera sina beställningar."
-      },
-      {
-        "name": "PERSISTENT_SHOPPING_CART",
-        "description": "En länk till information om din kundvagn och visningshistorik."
-      },
-      {
-        "name": "STORE",
-        "description": "Butiksvyn eller språket du har valt."
-      },
-      {
-        "name": "USER_ALLOWED_SAVE_COOKIE",
-        "description": "Anger om en kund tillåter användning av kakor."
-      },
-      {
-        "name": "_ga",
-        "description": "Google Analytics-kaka som används för att särskilja unika användare genom att tilldela ett slumpmässigt genererat nummer. Giltig i 2 år."
-      },
-      {
-        "name": "_ga_[ID]",
-        "description": "Google Analytics-kaka som används för att upprätthålla sessionsstatus. Giltig i 2 år."
-      },
-      {
-        "name": "_gid",
-        "description": "Google Analytics-kaka som används för att särskilja användare. Giltig i 24 timmar."
-      },
-      {
-        "name": "_gat",
-        "description": "Google Analytics-kaka som används för att begränsa förfrågningsfrekvensen. Giltig i 1 minut."
-      }
-    ]
+      "items": [
+        {
+          "name": "FORM_KEY",
+          "description": "Lagrar slumpmässigt genererad nyckel som används för att förhindra falska förfrågningar."
+        },
+        {
+          "name": "PHPSESSID",
+          "description": "Din session-ID på servern."
+        },
+        {
+          "name": "GUEST-VIEW",
+          "description": "Tillåter gäster att visa och redigera sina beställningar."
+        },
+        {
+          "name": "PERSISTENT_SHOPPING_CART",
+          "description": "En länk till information om din kundvagn och visningshistorik."
+        },
+        {
+          "name": "STORE",
+          "description": "Butiksvyn eller språket du har valt."
+        },
+        {
+          "name": "USER_ALLOWED_SAVE_COOKIE",
+          "description": "Anger om en kund tillåter användning av kakor."
+        },
+        {
+          "name": "_ga",
+          "description": "Google Analytics-kaka som används för att särskilja unika användare genom att tilldela ett slumpmässigt genererat nummer. Giltig i 2 år."
+        },
+        {
+          "name": "_ga_[ID]",
+          "description": "Google Analytics-kaka som används för att upprätthålla sessionsstatus. Giltig i 2 år."
+        },
+        {
+          "name": "_gid",
+          "description": "Google Analytics-kaka som används för att särskilja användare. Giltig i 24 timmar."
+        },
+        {
+          "name": "_gat",
+          "description": "Google Analytics-kaka som används för att begränsa förfrågningsfrekvensen. Giltig i 1 minut."
+        }
+      ]
+    }
   },
   "contact": {
     "title": "Kontakta Oss",

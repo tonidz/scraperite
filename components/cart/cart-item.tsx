@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Minus, Plus, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useCart } from "@/hooks/use-cart"
-import { type CartItem as CartItemType } from "@/types/product"
+import Image from "next/image";
+import { Minus, Plus, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/hooks/use-cart";
+import { type CartItem as CartItemType } from "@/types/product";
 
 interface CartItemProps {
-  item: CartItemType
+  item: CartItemType;
   dict: {
-    remove: string
-    quantity: string
-  }
+    remove: string;
+    quantity: string;
+  };
 }
 
 export function CartItem({ item, dict }: CartItemProps) {
-  const cart = useCart()
+  const cart = useCart();
 
   return (
     <div className="flex gap-4 py-4 border-b">
@@ -33,7 +33,7 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => cart.removeItem(item.id)}
+            onClick={() => cart.removeItem(item.id.toString())}
             title={dict.remove}
           >
             <X className="h-4 w-4" />
@@ -45,7 +45,9 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="outline"
             size="icon"
-            onClick={() => cart.updateQuantity(item.id, item.quantity - 1)}
+            onClick={() =>
+              cart.updateQuantity(item.id.toString(), item.quantity - 1)
+            }
             disabled={item.quantity <= 1}
           >
             <Minus className="h-4 w-4" />
@@ -54,12 +56,14 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="outline"
             size="icon"
-            onClick={() => cart.updateQuantity(item.id, item.quantity + 1)}
+            onClick={() =>
+              cart.updateQuantity(item.id.toString(), item.quantity + 1)
+            }
           >
             <Plus className="h-4 w-4" />
           </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }

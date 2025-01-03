@@ -27,6 +27,7 @@ export default async function HomePage({ params: { lang } }: HomePageProps) {
       <ProductShowcase dict={dict.products} />
       <GuideSection dict={dict.guide} videos={videoIds} />
       <TestimonialsSection dict={dict.testimonials} />
+      <ProductShowcase dict={dict.products} />
       <FeaturedPosts />
     </>
   );
