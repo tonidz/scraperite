@@ -1,0 +1,50 @@
+{
+  "en": {
+    "testimonials": {
+      "title": "What They Say About Our Products",
+      "subtitle": "Here are the opinions of some youtubers, who have tested our products, showing how to use Scraperite plastic blades and sharing their experience with their followers.",
+      "testimonials": [
+        {
+          "text": "This blade can typically be used directly on the surface of the paint or plastic on your car without damage or scratching. This is the most chemical resistant compound, it will resist just about anything.",
+          "author": "RT MediaSolutions"
+        },
+        {
+          "text": "What Scraperite plastic blades are good for is any task where you need to delicately scrape something off of a surface that you don't want to scratch up with conventional razor or pallete knife.",
+          "author": "Cool Tools"
+        },
+        {
+          "text": "Introducing the gentlest system for scraping or removing adhesive letters, traces of glue, sealants etc. Use Scraperite plastic blades.",
+          "author": "Pélitool"
+        },
+        {
+          "text": "I recently started removing graphics from my vehicle and thought I would share this method with you that worked successfully for me.",
+          "author": "Clint Boland"
+        }
+      ]
+    }
+  },
+  "sv": {
+    "testimonials": {
+      "title": "Vad De Säger Om Våra Produkter",
+      "subtitle": "Här är åsikterna från några youtubers som har testat våra produkter, visar hur man använder Scraperite plastblad och delar med sig av sina erfarenheter med sina följare.",
+      "testimonials": [
+        {
+          "text": "Detta blad kan vanligtvis användas direkt på ytan av färgen eller plasten på din bil utan skador eller repor. Detta är den mest kemikalieresistenta sammansättningen, den motstår nästan allt.",
+          "author": "RT MediaSolutions"
+        },
+        {
+          "text": "Vad Scraperite plastblad är bra för är alla uppgifter där du behöver skrapa av något försiktigt från en yta som du inte vill repa upp med vanlig rakblad eller palettkniv.",
+          "author": "Cool Tools"
+        },
+        {
+          "text": "Introducerar det skonsammaste systemet för att skrapa eller ta bort självhäftande bokstäver, limrester, tätningsmedel etc. Använd Scraperite plastblad.",
+          "author": "Pélitool"
+        },
+        {
+          "text": "Jag började nyligen ta bort grafik från mitt fordon och tänkte dela med mig av denna metod som fungerade framgångsrikt för mig.",
+          "author": "Clint Boland"
+        }
+      ]
+    }
+  }
+}

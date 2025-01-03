@@ -1,0 +1,274 @@
+{
+  "nav": {
+    "collections": "Kollektioner",
+    "brands": "Varumärken",
+    "new": "Nytt",
+    "sales": "Rea",
+    "demo": "Demo"
+  },
+  "hero": {
+    "title": "SCRAPERITE PLASTSKRAPOR",
+    "description": "Professionella plastskrapor för säker och effektiv rengöring och skrapning",
+    "button": "Se Demonstrationer",
+    "stats": {
+      "monthlyTraffic": "Månatlig trafik",
+      "happyCustomers": "Nöjda kunder"
+    }
+  },
+  "products": {
+    "title": "Våra Produkter",
+    "shopNow": "Köp Nu",
+    "relatedTitle": "Andra tittade också på",
+    "securePayment": "Säker betalning",
+    "paymentMethods": "Betalningsmetoder",
+    "securityNote": "Din betalningsinformation behandlas säkert",
+    "share": "Dela",
+    "copied": "Länk kopierad till urklipp"
+  },
+  "cart": {
+    "title": "Kundvagn",
+    "empty": "Din kundvagn är tom",
+    "total": "Totalt",
+    "checkout": "Till kassan",
+    "remove": "Ta bort",
+    "quantity": "Antal"
+  },
+  "guide": {
+    "title": "Demonstrationer och Guide",
+    "safetyTitle": "Säkerhet Först",
+    "safetyText": "ScrapeRite plastskrapor är designade för att vara säkra för både ytor och användare. Till skillnad från metallskrapor repar eller skadar de inte ytorna.",
+    "applications": {
+      "title": "Användningsområden",
+      "items": [
+        "Fönsterputs - ta bort klistermärken och färg",
+        "Bilrekond - säker rengöring av lack och rutor",
+        "Köksrengöring - spisar och bänkskivor",
+        "Industriell användning - utrustning och maskiner",
+        "Marin - båtunderhåll och rengöring",
+        "Bygg - städning och färgborttagning"
+      ]
+    },
+    "tips": {
+      "title": "Användningstips",
+      "items": [
+        "Använd alltid rätt bladhårdhet för din yta",
+        "Håll skrapan i 45 graders vinkel för bästa resultat",
+        "Byt blad när de blir slöa",
+        "Förvara torrt och skyddat från direkt solljus"
+      ]
+    }
+  },
+  "plasticGuide": {
+    "title": "Information om skrapblad i plast",
+    "intro": "På den här sidan har vi lagt upp video med demonstrationer på våra olika plastskrapor. Demonstratören är vår egna Chris som använt sig av både händer och tänger för att visa plastskrapornas egenskaper. Men givetvis kan det finnas funderingar och frågor om bladen ändå, då vill vi verkligen uppmuntra er att ta kontakt med oss så att vi går igenom dessa. I diagrammen nedan ser vi också en bra sammanfattning på egenskaperna. Varje färg symboliserar färgen på plastskrapan och höjden på stapel visar hur mycket mer av egenskapen som bladet har i jämförelse med de andra färgerna.",
+    "guide": {
+      "title": "Guide",
+      "description": "Nedan kan du se vår guide som visar vilka ytor som är bäst för respektive blad. För att få ut så mycket som möjligt utav bladen så behöver man också använda dem i rätt tillfällen. Detta tror vi kommer att göra dina skrapar mycket nöjdare med Scraperite.",
+      "catalogNote": "Katalogen kommer att öppnas upp i ny flik."
+    },
+    "blades": {
+      "gpo": {
+        "title": "GPO Bladet",
+        "description": "I demonstrationen ser vi att det Orangea skrapbladet är mjukt och flexibelt. Chris i videon försöker att bräcka det men har det väldigt tufft eftersom bladet är så pass tänjbart. Detta innebär att bladet kommer att anpassa sig mer efter ytan och böjas vid tillfällen den möter på hårdare motstånd."
+      },
+      "acrylic": {
+        "title": "Akrylplast",
+        "description": "I demonstrationen ser vi att det Gula skrapbladet är hårt och stelt. Chris i videon bräcker det enkelt eftersom det är inte är böjbart. Detta innebär att bladet är perfekt för plana och hårda ytor som metaller, golv och bord."
+      },
+      "polycarbonate": {
+        "title": "Polykarbonat Blad",
+        "description": "I demonstrationen ser vi att det Blåa skrapbladet är i jämförelse till det Orangea och Gula bladet precis mellan hårdhet och mjukhet. Detta bladet är framtaget för tillfällen där man inte behöver ett allt för mjukt eller hårt material. I videon ser vi att Chris inte behöver anstränga sig alltför mycket för att bräcka plasten men det ger inte med sig lika lätt som det Gula bladet. Detta innebär att bladet fungerar perfekt på badkar, fiberglas, ojämna ytor och mjukare metaller."
+      },
+      "industrial": {
+        "title": "Industriellt plastblad",
+        "description": "I demonstrationen ser vi att det Svarta plastbladet är väldigt hårt men även lite flexibelt. Detta gör att bladet tål tuffa ytor även i industrier som behöver ta i lite extra för att skrapa bort jobbiga fläckar. Bladets egenskaper gör också att det behåller dess kant mycket längre och har därmed en längre livslängd."
+      }
+    }
+  },
+  "bladeGuide": {
+    "title": "Att välja rätt blad",
+    "chemicalResistance": {
+      "title": "LÖSNINGSMEDELSMOTSTÅND",
+      "chemical": "KEMIKALIE"
+    },
+    "formula": {
+      "title": "BLADVAL = SUBSTANS + YTA + LÖSNINGSMEDLET",
+      "description": "Scraperite-blad har utvecklats med hjälp av olika tekniskt avancerade material för att möta ett allt bredare användningsområde som definieras av våra kunder. Varje blad kan potentiellt användas på vilken yta som helst, men lösningsmedieln eller kemikalierna som används för att rengöra den oönskade substansen kan förstöra bladet eller den underliggande ytan. Urvalet av bladalternativ säkerställer rätt val för att matcha ytan som ska rengöras med lösningsmedlet som används för att ta bort den oönskade substansen."
+    },
+    "bacteria": {
+      "title": "Samlar inte bakterier",
+      "description": "Bladen lyfter naturligt smutsen upp och bort utan att samla upp bakterier och kan enkelt torkas av med en engångsduk efter varje drag, till skillnad från skrubbsvampar och svampar som samlar smuts vid varje drag. Scraperite säkerhetsskrapor är mycket bättre på att skrapa avgränsade områden, på mjuka ytor där metallblad eller skrubbsvampar skulle skada en större del av den underliggande ytan."
+    },
+    "general": {
+      "title": "ALLMÄNT",
+      "features": [
+        "icke ledande",
+        "icke magnetisk",
+        "icke korrosiv",
+        "icke gnistbildande*"
+      ]
+    },
+    "edgeProperties": {
+      "title": "KANTEGENSKAPER",
+      "hardness": "KANTHÅRDHET",
+      "flexibility": "BÖJLIGHET",
+      "abrasive": "SLIPADE EGENSKAPER",
+      "values": {
+        "soft": "MJUK",
+        "medium": "MED",
+        "hard": "HÅRD",
+        "stiff": "STYV",
+        "low": "LÅG",
+        "high": "HÖG"
+      }
+    },
+    "surfaceReaction": {
+      "title": "YTBEAKTANDEN",
+      "surfaces": [
+        "DELIKAT ELLER MJUK",
+        "OJÄMN ELLER VÅGIG",
+        "HÅRD PLATT",
+        "OJÄMN ELLER GROV YTA"
+      ]
+    },
+    "temperature": {
+      "title": "TEMPERATUR NIVÅ",
+      "minimum": "MINIMUM (°C/°F)",
+      "maximum": "MAXIMUM (°C/°F)"
+    }
+  },
+  "packaging": {
+    "title": "Om Vår Förpackning",
+    "description": "Information om våra förpackningsformat och alternativ",
+    "formats": {
+      "title": "Förpackningsformat",
+      "retail": {
+        "title": "Detaljhandelsförpackning",
+        "description": "Vår detaljhandelsförpackning är designad för att vara iögonfallande och informativ. Varje förpackning innehåller detaljerad information om produkten och dess användningsområden."
+      },
+      "bulk": {
+        "title": "Bulkförpackning",
+        "description": "För större beställningar erbjuder vi bulkförpackningsalternativ som är både kostnadseffektiva och miljövänliga."
+      }
+    },
+    "options": {
+      "title": "Tillgängliga Alternativ",
+      "list": [
+        "Enskild blad detaljhandelsförpackning",
+        "5-pack detaljhandelsförpackning",
+        "10-pack detaljhandelsförpackning",
+        "25-pack bulkförpackning",
+        "100-pack bulkförpackning",
+        "Anpassade förpackningslösningar tillgängliga"
+      ]
+    },
+    "features": {
+      "title": "Förpackningsfunktioner",
+      "list": [
+        "Tydlig produktsynlighet",
+        "Detaljerade användningsinstruktioner",
+        "Färgkodad för enkel identifiering",
+        "Hållbar och skyddande design",
+        "Miljömedvetna material",
+        "Stapelbar för effektiv förvaring"
+      ]
+    },
+    "packingFormula": {
+      "title": "FÖRPACKNINGSFORMEL",
+      "description": "Enhetligt förpackningssystem för alla Scraperite-produkter säkerställer enkelhet genom att arbeta med dussinenheter; 12 enheter per innerlåda och 4 innerlådor per kartong. Palleterat, bandat, inslaget på en 4-vägs standard Euro-pall med totala enhetskvantiteter som varierar baserat på individuella SKUs.",
+      "exception": "Alla produkter följer denna struktur med undantag för 100-pack som fortfarande packas 5000 per kartong."
+    }
+  },
+  "testimonials": {
+    "title": "Vad De Säger Om Våra Produkter",
+    "subtitle": "Här är åsikterna från några youtubers som har testat våra produkter, visar hur man använder Scraperite plastblad och delar med sig av sina erfarenheter med sina följare.",
+    "testimonials": [
+      {
+        "text": "Detta blad kan vanligtvis användas direkt på ytan av färgen eller plasten på din bil utan skador eller repor. Detta är den mest kemikalieresistenta sammansättningen, den motstår nästan allt.",
+        "author": "RT MediaSolutions"
+      },
+      {
+        "text": "Vad Scraperite plastblad är bra för är alla uppgifter där du behöver skrapa av något försiktigt från en yta som du inte vill repa upp med vanlig rakblad eller palettkniv.",
+        "author": "Cool Tools"
+      },
+      {
+        "text": "Introducerar det skonsammaste systemet för att skrapa eller ta bort självhäftande bokstäver, limrester, tätningsmedel etc. Använd Scraperite plastblad.",
+        "author": "Pélitool"
+      },
+      {
+        "text": "Jag började nyligen ta bort grafik från mitt fordon och tänkte dela med mig av denna metod som fungerade framgångsrikt för mig.",
+        "author": "Clint Boland"
+      }
+    ]
+  },
+  "footer": {
+    "resellers": "Återförsäljare login",
+    "privacy": "Integritetspolicy"
+  },
+  "login": {
+    "title": "Återförsäljaråtkomst",
+    "description": "Logga in för att komma åt återförsäljarinformation"
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "intro": "Denna integritetspolicy ställer in hur denna webbplats använder och skyddar eventuell information som du ger när du använder denna webbplats. Vi är engagerade för att säkerställa att din integritet skyddas."
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "intro": "Välkommen till vår webbplats! Dessa användarvillkor (”villkor”) reglerar ditt användande av vår webbplats och dina relationer med vår webbplats. Genom att använda vår webbplats godkänner du dessa villkor. Om du inte godkänner något av dessa villkor, vänligen inte använda vår webbplats."
+  },
+  "cookies": {
+    "title": "Kakor",
+    "description": "En kaka är en liten fil som ber om tillåtelse att placeras på din datorns hårddisk. Kakor hjälper oss till att ge dig en bättre webbplats genom att vi kan övervaka vilka sidor du hittar användbara.",
+    "table": {
+      "name": "Kakans namn",
+      "description": "Beskrivning"
+    },
+    "items": [
+      {
+        "name": "FORM_KEY",
+        "description": "Lagrar slumpmässigt genererad nyckel som används för att förhindra falska förfrågningar."
+      },
+      {
+        "name": "PHPSESSID",
+        "description": "Din session-ID på servern."
+      },
+      {
+        "name": "GUEST-VIEW",
+        "description": "Tillåter gäster att visa och redigera sina beställningar."
+      },
+      {
+        "name": "PERSISTENT_SHOPPING_CART",
+        "description": "En länk till information om din kundvagn och visningshistorik."
+      },
+      {
+        "name": "STORE",
+        "description": "Butiksvyn eller språket du har valt."
+      },
+      {
+        "name": "USER_ALLOWED_SAVE_COOKIE",
+        "description": "Anger om en kund tillåter användning av kakor."
+      },
+      {
+        "name": "_ga",
+        "description": "Google Analytics-kaka som används för att särskilja unika användare genom att tilldela ett slumpmässigt genererat nummer. Giltig i 2 år."
+      },
+      {
+        "name": "_ga_[ID]",
+        "description": "Google Analytics-kaka som används för att upprätthålla sessionsstatus. Giltig i 2 år."
+      },
+      {
+        "name": "_gid",
+        "description": "Google Analytics-kaka som används för att särskilja användare. Giltig i 24 timmar."
+      },
+      {
+        "name": "_gat",
+        "description": "Google Analytics-kaka som används för att begränsa förfrågningsfrekvensen. Giltig i 1 minut."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "description": "Vänligen fyll i formuläret nedan för att kontakta oss."
+  }
+}

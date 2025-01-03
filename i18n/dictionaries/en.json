@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "collections": "Collections",
+    "brands": "Brands",
+    "new": "New",
+    "sales": "Sales",
+    "demo": "Demo"
+  },
+  "hero": {
+    "title": "SCRAPERITE PLASTIC SCRAPERS",
+    "description": "Professional plastic scrapers for safe and efficient cleaning and scraping",
+    "button": "View Demonstrations",
+    "stats": {
+      "monthlyTraffic": "Monthly traffic",
+      "happyCustomers": "Happy customers"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "shopNow": "Shop Now",
+    "relatedTitle": "Others Also Viewed",
+    "securePayment": "Secure Payment",
+    "paymentMethods": "Payment Methods",
+    "securityNote": "Your payment information is processed securely",
+    "share": "Share",
+    "copied": "Link copied to clipboard"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Quantity"
+  },
+  "guide": {
+    "title": "Demonstrations and Guide",
+    "safetyTitle": "Safety First",
+    "safetyText": "ScrapeRite plastic scrapers are designed to be safe for both surfaces and users. Unlike metal scrapers, they won't scratch or damage surfaces.",
+    "applications": {
+      "title": "Applications",
+      "items": [
+        "Window cleaning - remove stickers and paint",
+        "Car detailing - safe paint and window cleaning",
+        "Kitchen cleaning - stovetops and counters",
+        "Industrial use - equipment and machinery",
+        "Marine - boat maintenance and cleaning",
+        "Construction - cleanup and paint removal"
+      ]
+    },
+    "tips": {
+      "title": "Usage Tips",
+      "items": [
+        "Always use the appropriate blade hardness for your surface",
+        "Keep the scraper at a 45-degree angle for optimal results",
+        "Replace blades when they become dull",
+        "Store in a dry place away from direct sunlight"
+      ]
+    }
+  },
+  "plasticGuide": {
+    "title": "Plastic Blade Information",
+    "intro": "On this page, we've compiled videos demonstrating our various plastic scrapers. Our demonstrator Chris uses both hands and pliers to show the properties of the plastic scrapers. If you have any questions about the blades, we strongly encourage you to contact us so we can address them. The diagrams below also provide a good summary of the properties. Each color symbolizes the color of the plastic scraper, and the height of the bar shows how much more of that property the blade has compared to the other colors.",
+    "guide": {
+      "title": "Guide",
+      "description": "Below you can see our guide showing which surfaces are best for each blade. To get the most out of the blades, you need to use them at the right times. We believe this will make you much happier with Scraperite.",
+      "catalogNote": "The catalog will open in a new tab."
+    },
+    "blades": {
+      "gpo": {
+        "title": "GPO Blade",
+        "description": "In the demonstration, we see that the Orange scraper blade is soft and flexible. Chris in the video tries to break it but has a very tough time as the blade is so stretchable. This means the blade will adapt more to the surface and bend when it encounters harder resistance."
+      },
+      "acrylic": {
+        "title": "Acrylic Plastic",
+        "description": "In the demonstration, we see that the Yellow scraper blade is hard and rigid. Chris in the video breaks it easily as it's not flexible. This means the blade is perfect for flat and hard surfaces like metals, floors, and tables."
+      },
+      "polycarbonate": {
+        "title": "Polycarbonate Blade",
+        "description": "In the demonstration, we see that the Blue scraper blade is, compared to the Orange and Yellow blade, right between hardness and softness. This blade is designed for situations where you don't need an overly soft or hard material. In the video, we see that Chris doesn't need to strain too much to break the plastic, but it doesn't give in as easily as the Yellow blade. This means the blade works perfectly on bathtubs, fiberglass, uneven surfaces, and softer metals."
+      },
+      "industrial": {
+        "title": "Industrial Plastic Blade",
+        "description": "In the demonstration, we see that the Black plastic blade is very hard but also slightly flexible. This means the blade can handle tough surfaces even in industries that need to take extra effort to scrape away stubborn stains. The blade's properties also mean it maintains its edge much longer and thus has a longer lifespan."
+      }
+    }
+  },
+  "bladeGuide": {
+    "title": "Choosing the Right Blade",
+    "chemicalResistance": {
+      "title": "Chemical Resistance",
+      "chemical": "Chemical"
+    },
+    "formula": {
+      "title": "BLADE CHOICE = SUBSTANCE + SURFACE + SOLVENT",
+      "description": "Scraperite blades have been developed using various technically advanced materials to meet an ever-broader range of applications defined by our customers. Each blade can potentially be used on any surface, but the solvents or chemicals used to clean the unwanted substance can destroy the blade or the underlying surface. The selection of blade options ensures the right choice to match the surface to be cleaned with the solvent used to remove the unwanted substance."
+    },
+    "bacteria": {
+      "title": "Does not collect bacteria",
+      "description": "The blades naturally lift dirt up and away without collecting bacteria and can be easily wiped clean with a disposable cloth after each stroke, unlike scrubbing sponges and sponges that collect dirt with each stroke. Scraperite safety scrapers are much better at scraping defined areas, on soft surfaces where metal blades or scrubbing sponges would damage a larger portion of the underlying surface."
+    },
+    "general": {
+      "title": "GENERAL",
+      "features": [
+        "non-conductive",
+        "non-magnetic",
+        "non-corrosive",
+        "non-sparking*"
+      ]
+    },
+    "edgeProperties": {
+      "title": "EDGE PROPERTIES",
+      "hardness": "EDGE HARDNESS",
+      "flexibility": "FLEXIBILITY",
+      "abrasive": "ABRASIVE PROPERTIES",
+      "values": {
+        "soft": "SOFT",
+        "medium": "MED",
+        "hard": "HARD",
+        "stiff": "STIFF",
+        "low": "LOW",
+        "high": "HIGH"
+      }
+    },
+    "surfaceReaction": {
+      "title": "SURFACE REACTION",
+      "surfaces": [
+        "DELICATE OR SOFT",
+        "UNEVEN OR WAVY",
+        "HARD FLAT",
+        "UNEVEN OR ROUGH SURFACE"
+      ]
+    },
+    "temperature": {
+      "title": "TEMPERATURE LEVEL",
+      "minimum": "MINIMUM (°C/°F)",
+      "maximum": "MAXIMUM (°C/°F)"
+    }
+  },
+  "packaging": {
+    "title": "About Our Packaging",
+    "description": "Information about our packaging formats and options",
+    "formats": {
+      "title": "Packaging Formats",
+      "retail": {
+        "title": "Retail Packaging",
+        "description": "Our retail packaging is designed to be eye-catching and informative. Each package contains detailed information about the product and its applications."
+      },
+      "bulk": {
+        "title": "Bulk Packaging",
+        "description": "For larger orders, we offer bulk packaging options that are both cost-effective and environmentally friendly."
+      }
+    },
+    "options": {
+      "title": "Available Options",
+      "list": [
+        "Single blade retail packaging",
+        "5-pack retail packaging",
+        "10-pack retail packaging",
+        "25-pack bulk packaging",
+        "100-pack bulk packaging",
+        "Custom packaging solutions available"
+      ]
+    },
+    "features": {
+      "title": "Packaging Features",
+      "list": [
+        "Clear product visibility",
+        "Detailed usage instructions",
+        "Color-coded for easy identification",
+        "Durable and protective design",
+        "Environmentally conscious materials",
+        "Stackable for efficient storage"
+      ]
+    },
+    "packingFormula": {
+      "title": "PACKING FORMULA",
+      "description": "Uniform packaging system for all Scraperite products ensures simplicity by working in dozen unit counts; 12 units per Inner Box and 4 Inner Boxes per Case Box. Palletized, strapped, wrapped on a 4-way entry standard Euro pallet with total unit quantities varrying based on individual SKUs.",
+      "exception": "All products meet this structure with the exception of 100 packs which are still packed 5000 per case."
+    }
+  },
+  "testimonials": {
+    "title": "What They Say About Our Products",
+    "subtitle": "Here are the opinions of some youtubers, who have tested our products, showing how to use Scraperite plastic blades and sharing their experience with their followers.",
+    "testimonials": [
+      {
+        "text": "This blade can typically be used directly on the surface of the paint or plastic on your car without damage or scratching. This is the most chemical resistant compound, it will resist just about anything.",
+        "author": "RT MediaSolutions"
+      },
+      {
+        "text": "What Scraperite plastic blades are good for is any task where you need to delicately scrape something off of a surface that you don't want to scratch up with conventional razor or pallete knife.",
+        "author": "Cool Tools"
+      },
+      {
+        "text": "Introducing the gentlest system for scraping or removing adhesive letters, traces of glue, sealants etc. Use Scraperite plastic blades.",
+        "author": "Pélitool"
+      },
+      {
+        "text": "I recently started removing graphics from my vehicle and thought I would share this method with you that worked successfully for me.",
+        "author": "Clint Boland"
+      }
+    ]
+  },
+  "footer": {
+    "resellers": "Reseller Access",
+    "privacy": "Privacy Policy"
+  },
+  "login": {
+    "title": "Reseller Access",
+    "description": "Please sign in to access reseller information"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This privacy policy sets out how this website uses and protects any information that you give while using this website. We are committed to ensuring that your privacy is protected.",
+    "collect": {
+      "title": "What we collect",
+      "items": [
+        "Contact name",
+        "Contact information including email address",
+        "Demographic information such as postcode",
+        "Other information relevant to customer surveys and/or offers"
+      ]
+    },
+    "usage": {
+      "title": "What we do with the information",
+      "items": [
+        "Internal record keeping",
+        "Improve our products and services",
+        "Send promotional emails about new products and special offers"
+      ]
+    },
+    "cookies": {
+      "title": "How we use cookies",
+      "description": "A cookie is a small file which asks permission to be placed on your computer's hard drive. Cookies help us provide you with a better website by enabling us to monitor which pages you find useful.",
+      "table": {
+        "name": "Cookie Name",
+        "description": "Description"
+      },
+      "items": [
+        {
+          "name": "FORM_KEY",
+          "description": "Stores randomly generated key used to prevent forged requests."
+        },
+        {
+          "name": "PHPSESSID",
+          "description": "Your session ID on the server."
+        },
+        {
+          "name": "GUEST-VIEW",
+          "description": "Allows guests to view and edit their orders."
+        },
+        {
+          "name": "PERSISTENT_SHOPPING_CART",
+          "description": "A link to information about your cart and viewing history."
+        },
+        {
+          "name": "STORE",
+          "description": "The store view or language you have selected."
+        },
+        {
+          "name": "USER_ALLOWED_SAVE_COOKIE",
+          "description": "Indicates whether a customer allowed to use cookies."
+        },
+        {
+          "name": "_ga",
+          "description": "Google Analytics cookie used to distinguish unique users by assigning a randomly generated number. Valid for 2 years."
+        },
+        {
+          "name": "_ga_[ID]",
+          "description": "Google Analytics cookie used to maintain session status. Valid for 2 years."
+        },
+        {
+          "name": "_gid",
+          "description": "Google Analytics cookie used to distinguish users. Valid for 24 hours."
+        },
+        {
+          "name": "_gat",
+          "description": "Google Analytics cookie used to throttle request rate. Valid for 1 minute."
+        }
+      ]
+    }
+  }
+}
