@@ -44,7 +44,7 @@ export default async function LocaleLayout({
         <AuthProvider>
           <Providers>
             <div className="flex flex-col min-h-screen">
-              <Navbar />
+              <Navbar lang={lang} />
               <main className="flex-1 bg-[#FFE566]">
                 <div className="max-w-7xl mx-auto px-4 py-8">{children}</div>
               </main>

@@ -16,9 +16,15 @@ interface PostsGridProps {
   posts: Post[];
   columns?: number;
   maxPosts?: number;
+  showEditControls?: boolean;
 }
 
-export function PostsGrid({ posts, columns = 4, maxPosts }: PostsGridProps) {
+export function PostsGrid({
+  posts,
+  columns = 4,
+  maxPosts,
+  showEditControls = false,
+}: PostsGridProps) {
   const params = useParams();
   const lang = params.lang as string;
 
