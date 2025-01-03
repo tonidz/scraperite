@@ -2,13 +2,23 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import { createClient } from "@/lib/supabase/client";
 import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "../language-switcher";
+interface NavLinksProps {
+  dict: {
+    collections: string;
+    brands: string;
+    new: string;
+    sales: string;
+    demo: string;
+  };
+  className?: string;
+}
 
-export function NavLinks() {
+export function NavLinks({ dict, className }: NavLinksProps) {
   const params = useParams();
-  const lang = params.lang as string;
+  const lang = params.lang as "en" | "sv";
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -32,7 +42,7 @@ export function NavLinks() {
   }, []);
 
   return (
-    <nav className="mx-6 flex items-center space-x-8 flex-1 justify-end">
+    <nav className="hidden md:flex mx-6 items-center space-x-8 flex-1 justify-end">
       <Link
         href={`/${lang}/blade-guide`}
         className="text-sm font-medium transition-colors hover:text-gray-900"

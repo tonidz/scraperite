@@ -58,9 +58,9 @@ export function ProductDetails({
   if (!product.defaultPrice) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className="flex flex-col items-center md:grid md:grid-cols-2 gap-12">
       <motion.div
-        className="relative aspect-square bg-white rounded-lg p-8"
+        className="relative w-full max-w-[400px] aspect-square bg-white rounded-lg p-8"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
@@ -74,7 +74,7 @@ export function ProductDetails({
         />
       </motion.div>
       <motion.div
-        className="space-y-6"
+        className="w-full space-y-6"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -98,7 +98,7 @@ export function ProductDetails({
         />
       </motion.div>
 
-      <div className="col-span-2 prose max-w-none mb-16">
+      <div className="w-full md:col-span-2 prose max-w-none mb-16">
         <motion.div
           className="bg-white rounded-lg p-6 shadow-sm"
           initial={{ opacity: 0, y: 20 }}

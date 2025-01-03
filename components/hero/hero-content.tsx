@@ -29,7 +29,7 @@ export function HeroContent({ dict }: HeroContentProps) {
   return (
     <div className="flex flex-col justify-center space-y-12 w-full">
       <div>
-        <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-7xl font-bold leading-tight">
           {titleWords.map((word, index) => (
             <motion.span
               key={index}
