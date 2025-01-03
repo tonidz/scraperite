@@ -203,7 +203,8 @@
   },
   "footer": {
     "resellers": "Reseller Access",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "cookieSettings": "Cookie Settings"
   },
   "login": {
     "title": "Reseller Access",
@@ -282,6 +283,15 @@
           "description": "Google Analytics cookie used to throttle request rate. Valid for 1 minute."
         }
       ]
+    }
+  },
+  "cookies": {
+    "consent": {
+      "title": "Cookie Consent",
+      "description": "We use cookies to improve your experience, show personalized content and analyze our traffic. By clicking 'Accept' you agree to our use of cookies.",
+      "accept": "Accept all cookies",
+      "decline": "Decline",
+      "customize": "Customize settings"
     }
   }
 }

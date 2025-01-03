@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Instagram, Youtube, Facebook, ArrowRight } from "lucide-react";
+import { Instagram, Youtube, Facebook, ArrowRight, Cookie } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface FooterProps {
   dict: {
     resellers: string;
     privacy: string;
+    cookieSettings: string;
   };
 }
 
@@ -15,6 +17,12 @@ export function Footer({ dict }: FooterProps) {
   const params = useParams();
   const lang = params.lang as "en" | "sv";
   const currentYear = new Date().getFullYear();
+
+  const resetCookieConsent = () => {
+    localStorage.removeItem("cookie-consent");
+    // Reload the page to show the consent banner
+    window.location.reload();
+  };
 
   return (
     <footer className="bg-gradient-to-r from-black to-gray-900 text-white py-12">
@@ -60,6 +68,15 @@ export function Footer({ dict }: FooterProps) {
             >
               {dict.privacy}
             </Link>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={resetCookieConsent}
+              className="text-gray-400 hover:text-yellow-400"
+            >
+              <Cookie className="h-4 w-4 mr-2" />
+              {dict.cookieSettings}
+            </Button>
           </div>
 
           <Link

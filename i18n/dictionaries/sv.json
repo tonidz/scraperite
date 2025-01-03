@@ -203,7 +203,8 @@
   },
   "footer": {
     "resellers": "Återförsäljare login",
-    "privacy": "Integritetspolicy"
+    "privacy": "Integritetspolicy",
+    "cookieSettings": "Cookie-inställningar"
   },
   "login": {
     "title": "Återförsäljaråtkomst",
@@ -287,5 +288,14 @@
   "contact": {
     "title": "Kontakta Oss",
     "description": "Vänligen fyll i formuläret nedan för att kontakta oss."
+  },
+  "cookies": {
+    "consent": {
+      "title": "Cookie-inställningar",
+      "description": "Vi använder cookies för att förbättra din upplevelse, visa personligt innehåll och analysera vår trafik. Genom att klicka på 'Acceptera' godkänner du vår användning av cookies.",
+      "accept": "Acceptera alla cookies",
+      "decline": "Avböj",
+      "customize": "Anpassa inställningar"
+    }
   }
 }
