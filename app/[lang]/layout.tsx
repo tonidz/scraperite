@@ -7,6 +7,7 @@ import { locales, type ValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import Script from "next/script";
 import { CookieConsent } from "@/components/cookie-consent";
+import { AuthProvider } from "@/lib/context/auth-context";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -40,16 +41,18 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
-        <Providers>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-1 bg-[#FFE566]">
-              <div className="max-w-7xl mx-auto px-4 py-8">{children}</div>
-            </main>
-            <Footer dict={dict.footer} />
-          </div>
-          <Toaster />
-        </Providers>
+        <AuthProvider>
+          <Providers>
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              <main className="flex-1 bg-[#FFE566]">
+                <div className="max-w-7xl mx-auto px-4 py-8">{children}</div>
+              </main>
+              <Footer dict={dict.footer} />
+            </div>
+            <Toaster />
+          </Providers>
+        </AuthProvider>
         <CookieConsent dict={dict.cookies.consent} />
       </body>
     </html>

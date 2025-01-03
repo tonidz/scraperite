@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { login, signup } from "@/lib/supabase/actions";
 import { useParams } from "next/navigation";
+import { useAuth } from "@/lib/context/auth-context";
 
 interface AuthFormProps {
   dict: {
@@ -24,6 +25,7 @@ export function AuthForm({ dict }: AuthFormProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get("redirect") || "/";
+  const { refreshAuth } = useAuth();
 
   const [loginData, setLoginData] = useState({
     email: "",
@@ -57,6 +59,8 @@ export function AuthForm({ dict }: AuthFormProps) {
       if (result.error) {
         throw new Error(result.error);
       }
+
+      await refreshAuth();
 
       toast({
         title: "Success",

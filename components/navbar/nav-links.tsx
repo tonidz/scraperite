@@ -43,7 +43,7 @@ export function NavLinks() {
         href={`/${lang}/use-cases`}
         className="text-sm font-medium transition-colors hover:text-gray-900"
       >
-        {lang === "sv" ? "Användningsfall" : "Use Cases"}
+        {lang === "sv" ? "Användning" : "Use Cases"}
       </Link>
       <Link
         href={`/${lang}/demo`}

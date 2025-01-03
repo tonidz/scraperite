@@ -12,32 +12,17 @@ import {
 import { useParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useEffect, useState } from "react";
+import { useAuth } from "@/lib/context/auth-context";
 
 export function NavActions() {
   const cart = useCart();
   const params = useParams();
   const router = useRouter();
   const lang = params.lang as string;
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const { isAuthenticated, refreshAuth } = useAuth();
 
   useEffect(() => {
-    const supabase = createClient();
-
-    // Check initial auth state
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setIsAuthenticated(!!session);
-    });
-
-    // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      setIsAuthenticated(!!session);
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
+    refreshAuth();
   }, []);
 
   const handleSignOut = async () => {

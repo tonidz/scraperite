@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/client";
 import { useEffect, useState } from "react";
 import { PostsGrid } from "@/components/posts/posts-grid";
+import { useAuth } from "@/lib/context/auth-context";
 
 // Define the Post type
 interface Post {
@@ -18,6 +19,7 @@ export default function UseCasesPage() {
   // Specify the type for posts state
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -43,7 +45,7 @@ export default function UseCasesPage() {
   return (
     <div className="container mx-auto py-16 px-4">
       <h1 className="text-4xl font-bold mb-12 text-center">Use Cases</h1>
-      <PostsGrid posts={posts} columns={4} />
+      <PostsGrid posts={posts} columns={4} showEditControls={isAuthenticated} />
     </div>
   );
 }
