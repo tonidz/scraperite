@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { getStripe } from "@/lib/stripe/client";
-import { useCart } from "./use-cart";
+import { useCart } from "@/components/cart/cart-provider";
 import { useToast } from "./use-toast";
 import { useParams } from "next/navigation";
 

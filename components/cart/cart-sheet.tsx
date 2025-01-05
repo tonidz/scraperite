@@ -6,14 +6,15 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { useCart } from "@/hooks/use-cart";
+import { useCart } from "@/components/cart/cart-provider";
 import { CartItem } from "./cart-item";
 import { CartSummary } from "./cart-summary";
 import { useParams } from "next/navigation";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { useEffect, useState } from "react";
+import { type CartItem as CartItemType } from "@/types/product";
 
-export function CartSheet() {
+export default function CartSheet() {
   const cart = useCart();
   const params = useParams();
   const [dict, setDict] = useState<any>(null);
@@ -36,12 +37,8 @@ export function CartSheet() {
         </SheetHeader>
         <div className="flex flex-col h-full">
           <div className="flex-1 overflow-y-auto py-4">
-            {cart.items.map((item) => (
-              <CartItem
-                key={item.id}
-                item={{ ...item, id: Number(item.id) }}
-                dict={dict.cart}
-              />
+            {cart.items.map((item: CartItemType) => (
+              <CartItem key={item.id} item={item} dict={dict.cart} />
             ))}
           </div>
           <CartSummary dict={dict.cart} />

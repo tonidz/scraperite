@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Minus, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/hooks/use-cart";
+import { useCart } from "@/components/cart/cart-provider";
 import { type CartItem as CartItemType } from "@/types/product";
 
 interface CartItemProps {
@@ -16,6 +16,16 @@ interface CartItemProps {
 
 export function CartItem({ item, dict }: CartItemProps) {
   const cart = useCart();
+
+  const handleRemove = () => {
+    cart.removeItem(item.id.toString());
+  };
+
+  const handleUpdateQuantity = (newQuantity: number) => {
+    if (newQuantity >= 1) {
+      cart.updateQuantity(item.id.toString(), newQuantity);
+    }
+  };
 
   return (
     <div className="flex gap-4 py-4 border-b">
@@ -33,7 +43,7 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => cart.removeItem(item.id.toString())}
+            onClick={handleRemove}
             title={dict.remove}
           >
             <X className="h-4 w-4" />
@@ -45,9 +55,7 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="outline"
             size="icon"
-            onClick={() =>
-              cart.updateQuantity(item.id.toString(), item.quantity - 1)
-            }
+            onClick={() => handleUpdateQuantity(item.quantity - 1)}
             disabled={item.quantity <= 1}
           >
             <Minus className="h-4 w-4" />
@@ -56,9 +64,7 @@ export function CartItem({ item, dict }: CartItemProps) {
           <Button
             variant="outline"
             size="icon"
-            onClick={() =>
-              cart.updateQuantity(item.id.toString(), item.quantity + 1)
-            }
+            onClick={() => handleUpdateQuantity(item.quantity + 1)}
           >
             <Plus className="h-4 w-4" />
           </Button>

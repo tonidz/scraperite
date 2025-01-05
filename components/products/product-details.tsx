@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/hooks/use-cart";
+import { useCart } from "@/components/cart/cart-provider";
 import { useToast } from "@/hooks/use-toast";
 import { type StripeProduct } from "@/lib/stripe/products";
 import { formatCurrency } from "@/lib/stripe/config";

@@ -6,7 +6,6 @@ import { getProduct, getProducts } from "@/lib/stripe/products";
 import type { ValidLocale } from "@/i18n/config";
 import { locales } from "@/i18n/config";
 import { getProductMetadata } from "@/lib/supabase/products";
-import Image from "next/image";
 
 interface ProductPageProps {
   params: {

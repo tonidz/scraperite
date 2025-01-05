@@ -7,6 +7,12 @@ export interface Product {
   featured?: boolean
 }
 
-export interface CartItem extends Product {
-  quantity: number
+export interface CartItem {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  priceId: string;
+  image: string;
+  quantity: number;
 }
