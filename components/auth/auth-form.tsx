@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { login, signup } from "@/lib/supabase/actions";
 import { useParams } from "next/navigation";
 import { useAuth } from "@/lib/context/auth-context";
+import Link from "next/link";
 
 interface AuthFormProps {
   dict: {
@@ -152,6 +153,13 @@ export function AuthForm({ dict }: AuthFormProps) {
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "Logging in..." : "Login"}
           </Button>
+          <div className="text-center">
+            <Link href={`/${lang}/reset-password`}>
+              <Button variant="link" className="text-sm">
+                Forgot password?
+              </Button>
+            </Link>
+          </div>
         </form>
       </TabsContent>
 
