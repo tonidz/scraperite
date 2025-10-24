@@ -1,5 +1,6 @@
 import { stripe } from './server'
 import { cache } from 'react'
+import type Stripe from 'stripe'
 
 export interface StripeProduct {
   id: string
@@ -33,20 +34,24 @@ export const getProducts = cache(async (): Promise<StripeProduct[]> => {
     active: true,
   })
 
-  return products.map((product) => ({
-    id: product.id,
-    name: product.name,
-    description: product.description,
-    images: product.images,
-    defaultPrice: product.default_price
-      ? {
-          id: (product.default_price as any).id,
-          unitAmount: (product.default_price as any).unit_amount,
-          currency: (product.default_price as any).currency,
-        }
-      : null,
-    metadata: product.metadata,
-  }))
+  return products.map((product) => {
+    const defaultPrice = product.default_price as Stripe.Price | null
+
+    return {
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      images: product.images,
+      defaultPrice: defaultPrice
+        ? {
+            id: defaultPrice.id,
+            unitAmount: defaultPrice.unit_amount || 0,
+            currency: defaultPrice.currency,
+          }
+        : null,
+      metadata: product.metadata,
+    }
+  })
 })
 
 export const getProduct = cache(async (id: string): Promise<StripeProduct> => {
@@ -54,16 +59,18 @@ export const getProduct = cache(async (id: string): Promise<StripeProduct> => {
     expand: ['default_price'],
   })
 
+  const defaultPrice = product.default_price as Stripe.Price | null
+
   return {
     id: product.id,
     name: product.name,
     description: product.description,
     images: product.images,
-    defaultPrice: product.default_price
+    defaultPrice: defaultPrice
       ? {
-          id: (product.default_price as any).id,
-          unitAmount: (product.default_price as any).unit_amount,
-          currency: (product.default_price as any).currency,
+          id: defaultPrice.id,
+          unitAmount: defaultPrice.unit_amount || 0,
+          currency: defaultPrice.currency,
         }
       : null,
     metadata: product.metadata,

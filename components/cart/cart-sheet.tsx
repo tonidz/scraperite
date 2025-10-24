@@ -13,15 +13,16 @@ import { useParams } from "next/navigation";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { useEffect, useState } from "react";
 import { type CartItem as CartItemType } from "@/types/product";
+import type { Dictionary, ValidLocale } from "@/i18n/config";
 
 export default function CartSheet() {
   const cart = useCart();
   const params = useParams();
-  const [dict, setDict] = useState<any>(null);
+  const [dict, setDict] = useState<Dictionary | null>(null);
 
   useEffect(() => {
     const loadDictionary = async () => {
-      const dictionary = await getDictionary(params.lang as any);
+      const dictionary = await getDictionary(params.lang as ValidLocale);
       setDict(dictionary);
     };
     loadDictionary();
