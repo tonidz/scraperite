@@ -23,7 +23,7 @@ export function NavActions() {
 
   useEffect(() => {
     refreshAuth();
-  }, []);
+  }, [refreshAuth]);
 
   const handleSignOut = async () => {
     const supabase = createClient();

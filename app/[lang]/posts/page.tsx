@@ -1,7 +1,7 @@
 "use client";
 
 import { createClient } from "@/lib/supabase/client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { PostForm } from "@/components/posts/post-form";
 import { PostCard } from "@/components/posts/post-card";
 import { useRouter } from "next/navigation";
@@ -21,7 +21,7 @@ export default function PostsPage() {
   const router = useRouter();
   const { toast } = useToast();
 
-  const fetchPosts = async () => {
+  const fetchPosts = useCallback(async () => {
     const supabase = createClient();
 
     // Check authentication
@@ -50,11 +50,11 @@ export default function PostsPage() {
 
     setPosts(data || []);
     setLoading(false);
-  };
+  }, [router, toast]);
 
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, [fetchPosts]);
 
   if (loading) {
     return <div>Loading...</div>;

@@ -44,12 +44,16 @@ function useCarousel() {
 
 export function Carousel({
   children,
+  opts,
+  plugins,
+  orientation,
+  setApi,
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & CarouselProps) {
   const [carouselRef, api] = useEmblaCarousel({
-    ...props.opts,
-    axis: props.orientation === "vertical" ? "y" : "x",
-  }, props.plugins)
+    ...opts,
+    axis: orientation === "vertical" ? "y" : "x",
+  }, plugins)
 
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
@@ -85,12 +89,12 @@ export function Carousel({
   )
 
   React.useEffect(() => {
-    if (!api || !props.setApi) {
+    if (!api || !setApi) {
       return
     }
 
-    props.setApi(api)
-  }, [api, props.setApi])
+    setApi(api)
+  }, [api, setApi])
 
   React.useEffect(() => {
     if (!api) {
@@ -112,8 +116,8 @@ export function Carousel({
       value={{
         carouselRef,
         api: api,
-        opts: props.opts,
-        orientation: props.orientation || "horizontal",
+        opts,
+        orientation: orientation || "horizontal",
         scrollPrev,
         scrollNext,
         canScrollPrev,

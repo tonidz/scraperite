@@ -15,7 +15,7 @@ export default async function CheckoutSuccessPage({
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">Thank you for your order!</h1>
         <p className="text-gray-600 mb-8">
-          We'll send you a confirmation email with your order details.
+          We&apos;ll send you a confirmation email with your order details.
         </p>
         <Link href={`/${lang}`}>
           <Button>Continue Shopping</Button>

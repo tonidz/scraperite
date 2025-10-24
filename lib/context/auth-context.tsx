@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { createClient } from "@/lib/supabase/client";
 
 interface AuthContextType {
@@ -17,12 +17,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const supabase = createClient();
 
-  const refreshAuth = async () => {
+  const refreshAuth = useCallback(async () => {
     const {
       data: { user },
     } = await supabase.auth.getUser();
     setIsAuthenticated(!!user);
-  };
+  }, [supabase]);
 
   useEffect(() => {
     refreshAuth();
@@ -35,7 +35,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
 
     return () => subscription.unsubscribe();
-  }, []);
+  }, [refreshAuth, supabase]);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, refreshAuth }}>
