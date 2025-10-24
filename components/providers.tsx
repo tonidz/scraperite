@@ -1,8 +1,6 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
-import { AuthProvider } from "./auth/auth-provider";
-import { CartProvider } from "./cart/cart-provider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -12,9 +10,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <AuthProvider>
-        <CartProvider>{children}</CartProvider>
-      </AuthProvider>
+      {children}
     </ThemeProvider>
   );
 }

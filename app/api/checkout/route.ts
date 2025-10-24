@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createCheckoutSession } from '@/lib/stripe/checkout'
+import { logger } from '@/lib/utils/logger'
 
 export async function POST(req: Request) {
   try {
@@ -12,7 +13,9 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ sessionId: session.id })
   } catch (error) {
-    console.error('Stripe checkout error:', error)
+    logger.error('Stripe checkout error', error, {
+      endpoint: '/api/checkout',
+    })
     return NextResponse.json(
       { error: 'Error creating checkout session' },
       { status: 500 }
