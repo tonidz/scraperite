@@ -14,6 +14,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { useEffect, useState } from "react";
 import { type CartItem as CartItemType } from "@/types/product";
 import type { Dictionary, ValidLocale } from "@/i18n/config";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function CartSheet() {
   const cart = useCart();
@@ -28,7 +29,27 @@ export default function CartSheet() {
     loadDictionary();
   }, [params.lang]);
 
-  if (!dict) return null;
+  if (!dict) {
+    return (
+      <Sheet open={cart.isOpen} onOpenChange={cart.toggleCart}>
+        <SheetContent>
+          <SheetHeader>
+            <Skeleton className="h-6 w-24" />
+          </SheetHeader>
+          <div className="flex flex-col h-full">
+            <div className="flex-1 overflow-y-auto py-4 space-y-4">
+              <Skeleton className="h-24 w-full" />
+              <Skeleton className="h-24 w-full" />
+              <Skeleton className="h-24 w-full" />
+            </div>
+            <div className="pt-4 border-t">
+              <Skeleton className="h-12 w-full" />
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+    );
+  }
 
   return (
     <Sheet open={cart.isOpen} onOpenChange={cart.toggleCart}>

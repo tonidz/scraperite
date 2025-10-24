@@ -2,6 +2,7 @@ import { stripe } from "./server";
 import { CURRENCY, ALLOWED_COUNTRIES, SHIPPING_OPTIONS } from "./config";
 import type { CartItem as StripeCartItem } from "@/types/stripe";
 import type { Stripe } from "stripe";
+import { logger } from "@/lib/utils/logger";
 
 interface CreateCheckoutSessionParams {
   items: StripeCartItem[];
@@ -64,7 +65,9 @@ export async function createCheckoutSession({
       })),
     });
   } catch (error) {
-    console.error("Error creating checkout session:", error);
+    logger.error("Error creating checkout session", error, {
+      itemCount: items.length,
+    });
     throw error;
   }
 }
