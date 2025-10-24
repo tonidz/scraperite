@@ -1,11 +1,11 @@
 import { stripe } from "./server";
 import { CURRENCY, ALLOWED_COUNTRIES, SHIPPING_OPTIONS } from "./config";
-import type { CartItem as StripeCartItem } from "@/types/stripe";
+import type { CartItem } from "@/types/product";
 import type { Stripe } from "stripe";
 import { logger } from "@/lib/utils/logger";
 
 interface CreateCheckoutSessionParams {
-  items: StripeCartItem[];
+  items: CartItem[];
   successUrl: string;
   cancelUrl: string;
 }

@@ -147,3 +147,60 @@ export async function getAuthUser() {
 
   return user;
 }
+
+export async function requestPasswordReset(formData: FormData) {
+  const supabase = await createClient();
+  const email = String(formData.get('email')).trim();
+
+  // Validate email
+  if (!isValidEmail(email)) {
+    return { error: "Invalid email address" };
+  }
+
+  try {
+    // Get the language from the form data or default to 'en'
+    const lang = formData.get('lang') || 'en';
+    const redirectUrl = getURL(`/${lang}/update-password`);
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: redirectUrl,
+    });
+
+    if (error) {
+      console.error("Password reset error:", error);
+      return { error: error.message };
+    }
+
+    // Always return success to prevent email enumeration
+    return { success: true };
+  } catch (error: unknown) {
+    console.error("Password reset error:", error);
+    return { error: "Failed to send password reset email" };
+  }
+}
+
+export async function updatePassword(formData: FormData) {
+  const supabase = await createClient();
+  const password = String(formData.get('password')).trim();
+
+  if (!password || password.length < 8) {
+    return { error: "Password must be at least 8 characters long" };
+  }
+
+  try {
+    const { error } = await supabase.auth.updateUser({
+      password: password,
+    });
+
+    if (error) {
+      console.error("Update password error:", error);
+      return { error: error.message };
+    }
+
+    revalidatePath("/", "layout");
+    return { success: true };
+  } catch (error: unknown) {
+    console.error("Update password error:", error);
+    return { error: "Failed to update password" };
+  }
+}
