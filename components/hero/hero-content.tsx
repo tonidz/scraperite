@@ -50,26 +50,26 @@ export function HeroContent({ dict }: HeroContentProps) {
   };
 
   return (
-    <div className="h-full w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-end md:items-center pt-0 md:pt-40 pb-8 md:pb-0">
-      {/* Mobile: Content at bottom, Desktop: Content on left */}
-      <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col justify-end md:justify-center space-y-4 sm:space-y-6 mt-auto md:mt-0">
+    <div className="h-full w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center pt-4 md:pt-40 pb-8 md:pb-0">
+      {/* Mobile: Content near top below image, Desktop: Content on left */}
+      <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col justify-start md:justify-center space-y-4 sm:space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-black/60 backdrop-blur-md p-5 sm:p-6 rounded-2xl md:bg-transparent md:backdrop-blur-none md:p-0"
+          className="p-4 sm:p-6 md:p-0"
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-white drop-shadow-lg">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-black md:text-white md:drop-shadow-lg">
             Big
             <br />
             Gripper
           </h1>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-light mt-3 sm:mt-4 tracking-wide text-white drop-shadow-md opacity-90">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-light mt-3 sm:mt-4 tracking-wide text-black/80 md:text-white md:drop-shadow-md md:opacity-90">
             Bra grepp, bra tryck
           </h2>
 
-          <p className="text-sm sm:text-sm md:text-base mt-4 sm:mt-6 max-w-sm font-medium text-white drop-shadow-md opacity-90 leading-relaxed">
+          <p className="text-sm sm:text-sm md:text-base mt-4 sm:mt-6 max-w-sm font-medium text-black/70 md:text-white md:drop-shadow-md md:opacity-90 leading-relaxed">
             {dict.description}
           </p>
 
