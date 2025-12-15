@@ -1,6 +1,7 @@
 "use client";
 
 import { HeroContent } from "./hero-content";
+import { HeroScrollAnimation } from "./hero-scroll-animation";
 
 interface HeroSectionProps {
   dict: {
@@ -16,10 +17,10 @@ interface HeroSectionProps {
 
 export function HeroSection({ dict }: HeroSectionProps) {
   return (
-    <section className="min-h-[400px] flex items-center">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <section>
+      <HeroScrollAnimation>
         <HeroContent dict={dict} />
-      </div>
+      </HeroScrollAnimation>
     </section>
   );
 }

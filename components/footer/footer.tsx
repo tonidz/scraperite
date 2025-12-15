@@ -25,7 +25,7 @@ export function Footer({ dict }: FooterProps) {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-black to-gray-900 text-white py-12">
+    <footer className="relative z-20 bg-gradient-to-r from-black to-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Top Section with Logo and Social Links */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 pb-8 border-b border-gray-800">

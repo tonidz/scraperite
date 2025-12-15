@@ -4,10 +4,18 @@ import { headers } from 'next/headers'
 
 export async function POST(req: Request) {
   const body = await req.text()
-  const signature = headers().get('stripe-signature')
+  const headersList = await headers()
+  const signature = headersList.get('stripe-signature')
+
+  if (!signature) {
+    return NextResponse.json(
+      { error: 'No stripe signature found' },
+      { status: 400 }
+    )
+  }
 
   try {
-    const event = await verifyStripeWebhook(req)
+    const event = await verifyStripeWebhook(body, signature)
     await handleStripeWebhookEvent(event)
     
     return NextResponse.json({ received: true })
@@ -20,7 +28,4 @@ export async function POST(req: Request) {
   }
 }
 
-// New way (correct):
-export const runtime = 'edge'; // optional
-export const dynamic = 'force-dynamic';
-export const preferredRegion = 'auto';
+export const dynamic = 'force-dynamic'

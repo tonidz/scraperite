@@ -1,11 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShoppingBag } from "lucide-react";
-import { HeroCounter } from "./hero-counter";
-import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useCart } from "@/components/cart/cart-provider";
+import { useState } from "react";
+import { Check, ShoppingBag } from "lucide-react";
+
+// Big Gripper product definition
+const BIG_GRIPPER_PRODUCT = {
+  id: "big-gripper-hero",
+  name: "Big Gripper",
+  description: "Professional plastic scraper - Bra grepp, bra tryck",
+  price: 299, // Price in SEK
+  priceId: "price_big_gripper", // Update with actual Stripe price ID
+  image: "/bred.png",
+};
 
 interface HeroContentProps {
   dict: {
@@ -20,57 +30,97 @@ interface HeroContentProps {
 }
 
 export function HeroContent({ dict }: HeroContentProps) {
-  const router = useRouter();
   const params = useParams();
   const lang = params.lang as string;
+  const cart = useCart();
+  const [isAdded, setIsAdded] = useState(false);
 
-  const titleWords = dict.title.split(" ");
+  const handleAddToCart = () => {
+    cart.addItem({
+      ...BIG_GRIPPER_PRODUCT,
+      quantity: 1,
+    });
+
+    setIsAdded(true);
+
+    // Reset button state after animation
+    setTimeout(() => {
+      setIsAdded(false);
+    }, 2000);
+  };
 
   return (
-    <div className="flex flex-col justify-center space-y-12 w-full">
-      <div>
-        <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-          {titleWords.map((word, index) => (
-            <motion.span
-              key={index}
-              className="inline-block mr-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: [0.43, 0.13, 0.23, 0.96],
-              }}
-            >
-              {word}
-            </motion.span>
-          ))}
-        </h1>
-        <motion.p
-          className="text-lg mt-6 text-gray-600 max-w-2xl"
+    <div className="h-full w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-end md:items-center pt-0 md:pt-40 pb-8 md:pb-0">
+      {/* Mobile: Content at bottom, Desktop: Content on left */}
+      <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col justify-end md:justify-center space-y-4 sm:space-y-6 mt-auto md:mt-0">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="bg-black/60 backdrop-blur-md p-5 sm:p-6 rounded-2xl md:bg-transparent md:backdrop-blur-none md:p-0"
         >
-          {dict.description}
-        </motion.p>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-white drop-shadow-lg">
+            Big
+            <br />
+            Gripper
+          </h1>
+
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-light mt-3 sm:mt-4 tracking-wide text-white drop-shadow-md opacity-90">
+            Bra grepp, bra tryck
+          </h2>
+
+          <p className="text-sm sm:text-sm md:text-base mt-4 sm:mt-6 max-w-sm font-medium text-white drop-shadow-md opacity-90 leading-relaxed">
+            {dict.description}
+          </p>
+
+          <div className="mt-6 sm:mt-8">
+            <motion.div whileTap={{ scale: 0.95 }}>
+              <Button
+                className={`
+                  relative overflow-hidden rounded-none px-6 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold uppercase tracking-wider transition-all shadow-lg
+                  ${
+                    isAdded
+                      ? "bg-green-600 hover:bg-green-700"
+                      : "bg-red-600 hover:bg-red-700 hover:scale-105"
+                  }
+                  text-white
+                `}
+                onClick={handleAddToCart}
+                disabled={isAdded}
+              >
+                <AnimatePresence mode="wait">
+                  {isAdded ? (
+                    <motion.span
+                      key="added"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -20, opacity: 0 }}
+                      className="flex items-center gap-2"
+                    >
+                      <Check className="h-5 w-5" />
+                      {lang === "sv" ? "Tillagd!" : "Added!"}
+                    </motion.span>
+                  ) : (
+                    <motion.span
+                      key="buy"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -20, opacity: 0 }}
+                      className="flex items-center gap-2"
+                    >
+                      <ShoppingBag className="h-5 w-5" />
+                      {lang === "sv" ? "Köp nu" : "Buy now"}
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </Button>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-      >
-        <Button
-          className="bg-black text-white hover:bg-gray-800 rounded-full px-8 py-6 flex items-center gap-3 text-lg"
-          variant="default"
-          onClick={() => router.push(`/${lang}/demo`)}
-        >
-          <ShoppingBag className="h-5 w-5" />
-          {dict.button}
-          <ArrowRight className="h-5 w-5" />
-        </Button>
-      </motion.div>
+      {/* Center area kept empty - image displays in canvas behind */}
+      <div className="flex-1 hidden md:block"></div>
     </div>
   );
 }

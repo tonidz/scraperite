@@ -24,11 +24,13 @@ export default async function HomePage({ params: { lang } }: HomePageProps) {
   return (
     <>
       <HeroSection dict={dict.hero} />
-      <ProductShowcase dict={dict.products} />
-      <GuideSection dict={dict.guide} videos={videoIds} />
-      <TestimonialsSection dict={dict.testimonials} />
-      <ProductShowcase dict={dict.products} />
-      <FeaturedPosts />
+      <div className="relative z-10 bg-[#FFE566]">
+        <ProductShowcase dict={dict.products} />
+        <GuideSection dict={dict.guide} videos={videoIds} />
+        <TestimonialsSection dict={dict.testimonials} />
+        <ProductShowcase dict={dict.products} />
+        <FeaturedPosts />
+      </div>
     </>
   );
 }

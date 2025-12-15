@@ -293,5 +293,33 @@
       "decline": "Decline",
       "customize": "Customize settings"
     }
+  },
+  "orders": {
+    "title": "My Orders",
+    "empty": "You haven't placed any orders yet.",
+    "orderNumber": "Order",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "viewDetails": "View Details",
+    "items": "Items",
+    "shippingAddress": "Shipping Address",
+    "paymentStatus": "Payment Status",
+    "loginRequired": "Please sign in to view your orders.",
+    "signIn": "Sign In",
+    "statuses": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "paymentStatuses": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    }
   }
 }

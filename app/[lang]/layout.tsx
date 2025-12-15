@@ -52,7 +52,7 @@ export default async function LocaleLayout({
               <div className="flex flex-col min-h-screen">
                 <Navbar dict={dict.nav} />
                 <main className="flex-1 bg-[#FFE566]">
-                  <div className="max-w-7xl mx-auto px-4 py-8">{children}</div>
+                  {children}
                 </main>
                 <Footer dict={dict.footer} />
               </div>

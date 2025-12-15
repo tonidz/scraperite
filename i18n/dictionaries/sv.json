@@ -297,5 +297,33 @@
       "decline": "Avböj",
       "customize": "Anpassa inställningar"
     }
+  },
+  "orders": {
+    "title": "Mina Beställningar",
+    "empty": "Du har inte gjort några beställningar ännu.",
+    "orderNumber": "Beställning",
+    "date": "Datum",
+    "status": "Status",
+    "total": "Totalt",
+    "viewDetails": "Visa Detaljer",
+    "items": "Artiklar",
+    "shippingAddress": "Leveransadress",
+    "paymentStatus": "Betalningsstatus",
+    "loginRequired": "Logga in för att se dina beställningar.",
+    "signIn": "Logga in",
+    "statuses": {
+      "pending": "Väntande",
+      "processing": "Behandlas",
+      "shipped": "Skickad",
+      "delivered": "Levererad",
+      "cancelled": "Avbruten",
+      "refunded": "Återbetald"
+    },
+    "paymentStatuses": {
+      "pending": "Väntande",
+      "paid": "Betald",
+      "failed": "Misslyckad",
+      "refunded": "Återbetald"
+    }
   }
 }
